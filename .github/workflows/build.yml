@@ -1,0 +1,40 @@
+name: SiTac Build & Release
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore Dependencies
+      run: dotnet restore SiTac.sln
+
+    - name: Build Solution
+      run: dotnet build SiTac.sln --configuration Release --no-restore
+
+    - name: Run Tests
+      run: dotnet test SiTac.sln --no-build --verbosity normal
+
+    - name: Publish SiTacSim (Simulator)
+      run: dotnet publish SiTacSim/SiTacSim.csproj -c Release -o ./publish/SiTacSim
+
+    - name: Publish SiTac (Dashboard)
+      run: dotnet publish SiTac/SiTac.csproj -c Release -o ./publish/SiTac
+
+    - name: Upload SiTac Suite
+      uses: actions/upload-artifact@v4
+      with:
+        name: SiTac-Suite-Build-${{ github.run_number }}
+        path: ./publish/
