@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiTacLib", "SiTacLib\SiTacLib.csproj", "{98AF7E98-1AE1-4F9E-955E-B37A9E5DF361}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiTacSim", "SiTacSim\SiTacSim.csproj", "{AAB5886D-31A3-47D4-8CEF-3DF7333E9655}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98AF7E98-1AE1-4F9E-955E-B37A9E5DF361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98AF7E98-1AE1-4F9E-955E-B37A9E5DF361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98AF7E98-1AE1-4F9E-955E-B37A9E5DF361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98AF7E98-1AE1-4F9E-955E-B37A9E5DF361}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAB5886D-31A3-47D4-8CEF-3DF7333E9655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB5886D-31A3-47D4-8CEF-3DF7333E9655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB5886D-31A3-47D4-8CEF-3DF7333E9655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB5886D-31A3-47D4-8CEF-3DF7333E9655}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
