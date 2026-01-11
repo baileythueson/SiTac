@@ -1,6 +1,6 @@
 # SiTac: Tactical Situational Awareness Suite
 
-![Build Status](https://img.shields.io/github/actions/workflow/status/YOUR_USERNAME/SiTac/build.yml?label=Build&logo=github)
+![Build Status](https://img.shields.io/github/actions/workflow/status/baileythueson/SiTac/build.yml?label=Build&logo=github)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20(WPF)-0078D7)
 ![Standard](https://img.shields.io/badge/Standard-Cursor%20on%20Target%20(CoT)-orange)
 
