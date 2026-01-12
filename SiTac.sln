@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiTacLib", "SiTacLib\SiTacL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiTacSim", "SiTacSim\SiTacSim.csproj", "{AAB5886D-31A3-47D4-8CEF-3DF7333E9655}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiTacTest", "SiTacTest\SiTacTest.csproj", "{48623837-A570-4F37-9612-8C97C830FAAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{AAB5886D-31A3-47D4-8CEF-3DF7333E9655}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAB5886D-31A3-47D4-8CEF-3DF7333E9655}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAB5886D-31A3-47D4-8CEF-3DF7333E9655}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48623837-A570-4F37-9612-8C97C830FAAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48623837-A570-4F37-9612-8C97C830FAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48623837-A570-4F37-9612-8C97C830FAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48623837-A570-4F37-9612-8C97C830FAAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
