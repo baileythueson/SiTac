@@ -3,6 +3,7 @@
 ![Build Status](https://img.shields.io/github/actions/workflow/status/baileythueson/SiTac/build.yml?label=Build&logo=github)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20(WPF)-0078D7)
 ![Standard](https://img.shields.io/badge/Standard-Cursor%20on%20Target%20(CoT)-orange)
+[![Trello](https://img.shields.io/badge/Roadmap-Trello-%230052CC?logo=trello)](https://trello.com/b/vcokoV9t/sitac)
 
 **SiTac** (Sim Tactical) is a distributed Command & Control (C2) system designed to visualize real-time telemetry from remote assets. Built on the **.NET 10** ecosystem, it implements the **Cursor on Target (CoT)** interoperability standard to maintain Common Operational Pictures (COP) across disparate nodes.
 
@@ -29,51 +30,3 @@ Implements the MIL-STD/Event Schema for CoT.
 
 ### 2. High-Performance Networking
 * **UDP Multicast:** Utilizes `System.Net.Sockets` for fire-and-forget telemetry streams, mimicking low-bandwidth tactical radio environments.
-* **Async/Await:** Heavy I/O operations are offloaded to background threads to ensure the UI remains responsive during high-traffic bursts.
-
-### 3. Modern Desktop UI (WPF)
-* **MVVM Pattern:** Strict separation of concerns using Data Binding and Commands.
-* **Real-Time Visualization:** Dynamic map markers that interpolate position updates for smooth movement visualization.
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-* .NET 10.0 SDK
-* Windows 10/11 (for WPF Client)
-
-### Installation
-You can download the latest binaries from the [Releases Page](https://github.com/baileythueson/SiTac/releases) or build from source:
-
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/baileythueson/SiTac.git](https://github.com/YOUR_USERNAME/SiTac.git)
-    ```
-
-2.  **Build the Suite**
-    ```bash
-    dotnet build SiTac.sln -c Release
-    ```
-
-3.  **Run the Simulation**
-    * Start `SiTac.exe` (The Dashboard) first to open the listener.
-    * Start `SiTacSim.exe` (The Simulator) to begin broadcasting telemetry.
-
----
-
-## 🛠 Tech Stack
-
-| Category | Technology | Usage |
-| :--- | :--- | :--- |
-| **Language** | C# / .NET 10 | Core Application Logic |
-| **UI Framework** | WPF (Windows Presentation Foundation) | Mission Dashboard |
-| **Architecture** | MVVM (Model-View-ViewModel) | UI Decoupling |
-| **Networking** | UDP Sockets | Data Transport Layer |
-| **Data Format** | XML (Cursor on Target) | Serialization |
-| **CI/CD** | GitHub Actions | Automated Build & Release |
-
----
-
-## 📜 License
-Distributed under the MIT License. See `LICENSE` for more information.
