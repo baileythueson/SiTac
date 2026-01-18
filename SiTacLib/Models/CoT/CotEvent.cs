@@ -22,4 +22,28 @@ public class CotEvent
     
     [XmlElement(ElementName = "detail")]
     public CotDetail? Detail { get; set;}
+    
+    public void Validate()
+    {
+        if (string.IsNullOrWhiteSpace(Uid)) throw new CotValidationException(nameof(Uid), Uid, "UID is required");
+        if (string.IsNullOrWhiteSpace(Type)) throw new CotValidationException(nameof(Type), Type, "Type is required");
+
+        if (Stale <= Start) throw new CotValidationException(nameof(Stale), "Stale must be greater than Start", nameof(Stale));
+        
+        if (Time <= Start) throw new CotValidationException(nameof(Time), "Time must be greater than Start", nameof(Time));
+        
+        if (Time >= Stale) throw new CotValidationException(nameof(Time), "Time must be less than Stale", nameof(Time));
+        
+        if (string.IsNullOrWhiteSpace(How)) throw new CotValidationException(nameof(How), How, "How is required");
+        
+        if (Point is null) throw new CotValidationException(nameof(Point), "Point is required");
+        
+        Point.Validate();
+        
+        Detail?.Validate();
+    }
+    
+    public static CotEvent FromXml(string xml) => 
+        (CotEvent) new XmlSerializer(typeof(CotEvent)).Deserialize(new StringReader(xml))! 
+        ?? throw new CotValidationException("Failed to deserialize XML") ;
 }

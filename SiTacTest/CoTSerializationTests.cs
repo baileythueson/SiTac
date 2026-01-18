@@ -12,18 +12,18 @@ public class CoTSerializationTests
     {
         var cotEvent = new CotEvent
         {
-            uid = "Drone-Alpha-01",
-            type = "a-f-A-M-F-Q",
-            time = DateTime.Now,
-            stale = DateTime.Now.AddYears(2),
-            start = default,
+            Uid = "Drone-Alpha-01",
+            Type = "a-f-A-M-F-Q",
+            Time = DateTime.Now,
+            Stale = DateTime.Now.AddYears(2),
+            Start = default,
             Point = new CotPoint()
             {
                 lat = 41.5,
                 lon = -111.8,
                 hae = 1500,
             },
-            how = "m-g"
+            How = "m-g"
         };
         
         return cotEvent;
@@ -39,9 +39,9 @@ public class CoTSerializationTests
         var xml = textWriter.ToString();
 
         xml.Should().NotBeNullOrEmpty();
-        xml.Should().Contain("uid=\"Drone-Alpha-01\"");
-        xml.Should().Contain("lat=\"41.5\"");
-        xml.Should().Contain("lon=\"-111.8\"");
-        xml.Should().Contain("hae=\"1500\"");
+        xml.Should().Contain("Uid=\"Drone-Alpha-01\"");
+        xml.Should().Contain("Lat=\"41.5\"");
+        xml.Should().Contain("Lon=\"-111.8\"");
+        xml.Should().Contain("Hae=\"1500\"");
     }
 }
