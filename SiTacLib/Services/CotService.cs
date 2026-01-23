@@ -20,7 +20,7 @@ public class CotService
         {
             CotEvent cotEvent = CotEvent.FromXml(cotXml);
             cotEvent.Validate();
-            _repository.Save(cotEvent);
+            // _repository.Save(cotEvent);
         }
         catch (CotValidationException e)
         {

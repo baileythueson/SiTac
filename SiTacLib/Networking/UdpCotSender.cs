@@ -68,11 +68,11 @@ public sealed class UdpCotSender : ICotSender, IDisposable
             
             int bytesSent = await _udpClient.SendAsync(data, data.Length, targetIp, port);
             
-            _logger.LogTrace("Sent CoT Event {Uid} ({Bytes} bytes) to {Ip}:{Port}", cotEvent.uid, bytesSent, targetIp, port);
+            _logger.LogTrace("Sent CoT Event {Uid} ({Bytes} bytes) to {Ip}:{Port}", cotEvent.Uid, bytesSent, targetIp, port);
         }
         catch (Exception e)
         {
-            _logger.LogError(e, "Failed to send CoT Event {Uid}", cotEvent.uid);
+            _logger.LogError(e, "Failed to send CoT Event {Uid}", cotEvent.Uid);
         }
     }
     

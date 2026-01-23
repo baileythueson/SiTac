@@ -17,13 +17,14 @@ public class CoTSerializationTests
             Time = DateTime.Now,
             Stale = DateTime.Now.AddYears(2),
             Start = default,
+            How = "m-g",
+
             Point = new CotPoint()
             {
                 lat = 41.5,
                 lon = -111.8,
                 hae = 1500,
             },
-            How = "m-g"
         };
         
         return cotEvent;

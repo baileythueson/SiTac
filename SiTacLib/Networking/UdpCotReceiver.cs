@@ -93,7 +93,7 @@ public sealed class UdpCotReceiver : ICotReceiver, IDisposable
 
             if (_serializer.Deserialize(reader) is CotEvent cotEvent)
             {
-                _logger.LogDebug("Received CoT event from {Sender}: {Uid} ({Type}),", sender, cotEvent.uid, cotEvent.type);
+                _logger.LogDebug("Received CoT event from {Sender}: {Uid} ({Type}),", sender, cotEvent.Uid, cotEvent.Type);
                 
                 CotEventReceived?.Invoke(this, cotEvent);
             }
