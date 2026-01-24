@@ -45,5 +45,5 @@ public class CotEvent
     
     public static CotEvent FromXml(string xml) => 
         (CotEvent) new XmlSerializer(typeof(CotEvent)).Deserialize(new StringReader(xml))! 
-        ?? throw new CotValidationException("Failed to deserialize XML") ;
+        ?? throw new CotValidationException("Failed to deserialize XML");
 }

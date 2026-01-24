@@ -10,11 +10,11 @@ namespace SiTacLib.Models.CoT;
 /// </summary>
 public class CotPoint
 {
-    [XmlAttribute] public double lat { get; set; }
-    [XmlAttribute] public double lon { get; set; }
-    [XmlAttribute] public double hae { get; set; }
-    [XmlAttribute] public double ce { get; set; }
-    [XmlAttribute] public double le { get; set; }
+    [XmlAttribute] public double Lat { get; set; }
+    [XmlAttribute] public double Lon { get; set; }
+    [XmlAttribute] public double Hae { get; set; }
+    [XmlAttribute] public double Ce { get; set; }
+    [XmlAttribute] public double Le { get; set; }
 
     /// <summary>
     /// Validates the properties of the CotPoint instance to ensure that they conform to
@@ -29,19 +29,19 @@ public class CotPoint
     /// </exception>
     public void Validate()
     {
-        if (lat < -90 || lat > 90)
-            throw new CotValidationException(nameof(lat), lat.ToString(CultureInfo.InvariantCulture),
+        if (Lat < -90 || Lat > 90)
+            throw new CotValidationException(nameof(Lat), Lat.ToString(CultureInfo.InvariantCulture),
                 "Latitude must be between -90 and 90 degrees.");
-        if (lon < -180 || lon > 180)
-            throw new CotValidationException(nameof(lon), lon.ToString(CultureInfo.InvariantCulture),
+        if (Lon < -180 || Lon > 180)
+            throw new CotValidationException(nameof(Lon), Lon.ToString(CultureInfo.InvariantCulture),
                 "Longitude must be between -180 and 180 degrees.");
 
-        if (ce < 0)
-            throw new CotValidationException(nameof(ce), ce.ToString(CultureInfo.InvariantCulture),
+        if (Ce < 0)
+            throw new CotValidationException(nameof(Ce), Ce.ToString(CultureInfo.InvariantCulture),
                 "Ce must be positive.");
         
-        if (le < 0)
-            throw new CotValidationException(nameof(le), le.ToString(CultureInfo.InvariantCulture),
+        if (Le < 0)
+            throw new CotValidationException(nameof(Le), Le.ToString(CultureInfo.InvariantCulture),
                 "Le must be positive.");
     }
 }
